@@ -67,9 +67,9 @@ export const Flowvatar: React.FC<FlowvatarProps> = ({
   }, [])
 
   const sizeClasses = {
-    sm: 'w-24 h-24 sm:w-28 sm:h-28',
-    md: 'w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52',
-    lg: 'w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96',
+    sm: 'w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28',
+    md: 'w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48',
+    lg: 'w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96',
   }
 
   const themeClasses = {

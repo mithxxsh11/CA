@@ -72,11 +72,11 @@ _Sent via Chandni's Academy website_`
       aria-modal="true"
       aria-labelledby="modal-title"
     >
-      <div className="relative w-full max-w-xl bg-[#efece6] text-[#141414] border-2 border-[#101d35]/20 shadow-2xl rounded-2xl overflow-hidden p-6 sm:p-10 max-h-[92vh] overflow-y-auto">
+      <div className="relative w-full max-w-xl bg-[#efece6] text-[#141414] border-2 border-[#101d35]/20 shadow-2xl rounded-2xl overflow-hidden p-5 sm:p-10 max-h-[92vh] overflow-y-auto">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 w-10 h-10 rounded-full border border-black/20 flex items-center justify-center hover:bg-black hover:text-white transition-colors cursor-pointer text-sm font-mono"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-black/20 flex items-center justify-center hover:bg-black hover:text-white transition-colors cursor-pointer text-sm font-mono"
           aria-label="Close modal"
         >
           ✕
@@ -88,16 +88,16 @@ _Sent via Chandni's Academy website_`
               <span className="mono-label text-[#101d35] block mb-1">
                 Chandni's Academy • HSR Layout
               </span>
-              <h2 id="modal-title" className="font-flow text-4xl sm:text-5xl leading-none">
+              <h2 id="modal-title" className="font-flow text-3xl sm:text-5xl leading-none">
                 REGISTER YOUR INTEREST
               </h2>
-              <p className="font-sans text-sm text-[#141414]/70 mt-2">
+              <p className="font-sans text-xs sm:text-sm text-[#141414]/70 mt-2">
                 Join our next cohort or request a consultation. Submitting will pre-fill and open your enquiry directly in WhatsApp with Chandni Galagali.
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label className="block text-xs font-mono uppercase tracking-wider mb-1 text-black/70">
                     First Name *
@@ -108,7 +108,7 @@ _Sent via Chandni's Academy website_`
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     placeholder="Chandni"
-                    className="w-full px-3.5 py-2.5 bg-white border border-black/20 rounded-lg text-sm focus:outline-none focus:border-[#101d35] focus:ring-1 focus:ring-[#101d35]"
+                    className="w-full px-3.5 py-2.5 bg-white border border-black/20 rounded-lg text-base sm:text-sm focus:outline-none focus:border-[#101d35] focus:ring-1 focus:ring-[#101d35]"
                   />
                 </div>
                 <div>
@@ -121,12 +121,12 @@ _Sent via Chandni's Academy website_`
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                     placeholder="Sharma"
-                    className="w-full px-3.5 py-2.5 bg-white border border-black/20 rounded-lg text-sm focus:outline-none focus:border-[#101d35] focus:ring-1 focus:ring-[#101d35]"
+                    className="w-full px-3.5 py-2.5 bg-white border border-black/20 rounded-lg text-base sm:text-sm focus:outline-none focus:border-[#101d35] focus:ring-1 focus:ring-[#101d35]"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label className="block text-xs font-mono uppercase tracking-wider mb-1 text-black/70">
                     WhatsApp Number *
@@ -137,7 +137,7 @@ _Sent via Chandni's Academy website_`
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 98765 43210"
-                    className="w-full px-3.5 py-2.5 bg-white border border-black/20 rounded-lg text-sm focus:outline-none focus:border-[#101d35] focus:ring-1 focus:ring-[#101d35]"
+                    className="w-full px-3.5 py-2.5 bg-white border border-black/20 rounded-lg text-base sm:text-sm focus:outline-none focus:border-[#101d35] focus:ring-1 focus:ring-[#101d35]"
                   />
                 </div>
                 <div>
@@ -150,7 +150,7 @@ _Sent via Chandni's Academy website_`
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="you@domain.com"
-                    className="w-full px-3.5 py-2.5 bg-white border border-black/20 rounded-lg text-sm focus:outline-none focus:border-[#101d35] focus:ring-1 focus:ring-[#101d35]"
+                    className="w-full px-3.5 py-2.5 bg-white border border-black/20 rounded-lg text-base sm:text-sm focus:outline-none focus:border-[#101d35] focus:ring-1 focus:ring-[#101d35]"
                   />
                 </div>
               </div>
@@ -162,7 +162,7 @@ _Sent via Chandni's Academy website_`
                 <select
                   value={formData.area}
                   onChange={(e) => setFormData({ ...formData, area: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-white border border-black/20 rounded-lg text-sm focus:outline-none focus:border-[#101d35] focus:ring-1 focus:ring-[#101d35]"
+                  className="w-full px-3.5 py-2.5 bg-white border border-black/20 rounded-lg text-base sm:text-sm focus:outline-none focus:border-[#101d35] focus:ring-1 focus:ring-[#101d35]"
                 >
                   {programmesList.map((p) => (
                     <option key={p} value={p}>

@@ -57,11 +57,11 @@ export const WhoWeAre: React.FC<WhoWeAreProps> = ({ onOpenRegister }) => {
     <section id="who-we-are" className="py-24 bg-[#efece6] border-t border-[#141414]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Giant Stacked Editorial Tagline matching Flow Party */}
-        <div className="mb-20">
+        <div className="mb-14 sm:mb-20">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-[#141414]/60 block mb-4">
             WHO WE ARE
           </span>
-          <h2 className="font-flow text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-[#141414] leading-[0.88] tracking-tight">
+          <h2 className="font-flow text-4xl sm:text-7xl md:text-8xl lg:text-9xl text-[#141414] leading-[0.92] sm:leading-[0.88] tracking-tight">
             A PLACE TO FIND YOUR VOICE.
             <br />
             <span className="text-[#2458f5]">A SPACE TO BUILD CONFIDENCE.</span>
@@ -73,7 +73,7 @@ export const WhoWeAre: React.FC<WhoWeAreProps> = ({ onOpenRegister }) => {
         {/* Founder Showcase Card & Story Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20 items-stretch">
           {/* Founder Profile Card */}
-          <div className="lg:col-span-5 bg-[#101d35] text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between shadow-xl">
+          <div className="lg:col-span-5 bg-[#101d35] text-white rounded-3xl p-6 sm:p-10 flex flex-col justify-between shadow-xl">
             <div>
               <div className="flex justify-between items-center mb-6">
                 <span className="font-mono text-xs uppercase tracking-widest text-[#d8c29b]">
@@ -82,14 +82,14 @@ export const WhoWeAre: React.FC<WhoWeAreProps> = ({ onOpenRegister }) => {
                 <span className="w-3 h-3 rounded-full bg-[#bfff0a] animate-pulse" />
               </div>
 
-              {/* Founder Avatar */}
-              <div className="flex items-center gap-6 mb-8">
+              {/* Founder Avatar & Title */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5 sm:gap-6 mb-8">
                 <Flowvatar size="md" theme="navy" />
                 <div>
-                  <h3 className="font-flow text-4xl sm:text-5xl leading-none text-white">
+                  <h3 className="font-flow text-3xl sm:text-5xl leading-none text-white">
                     CHANDNI GALAGALI
                   </h3>
-                  <span className="font-mono text-xs uppercase tracking-wider text-[#d8c29b] block mt-1">
+                  <span className="font-mono text-xs uppercase tracking-wider text-[#d8c29b] block mt-1.5">
                     Founder — Chandni's Academy
                   </span>
                   <span className="font-mono text-[11px] text-white/50 block mt-0.5">
@@ -98,22 +98,22 @@ export const WhoWeAre: React.FC<WhoWeAreProps> = ({ onOpenRegister }) => {
                 </div>
               </div>
 
-              <blockquote className="font-editorial text-2xl text-[#d8c29b] leading-relaxed mb-6">
+              <blockquote className="font-editorial text-xl sm:text-2xl text-[#d8c29b] leading-relaxed mb-6 text-center sm:text-left">
                 “Communication is not merely about speaking English. It is about expressing ideas, developing self-belief, building meaningful relationships, and becoming an impactful individual.”
               </blockquote>
 
-              <p className="font-sans text-sm text-white/80 leading-relaxed">
+              <p className="font-sans text-xs sm:text-sm text-white/80 leading-relaxed text-center sm:text-left">
                 Chandni Galagali established Chandni's Academy in HSR Layout with a focused mission: to bridge the gap between human potential and real-world expression through dedicated, personalized mentoring.
               </p>
             </div>
 
-            <div className="pt-8 border-t border-white/10 mt-8 flex flex-wrap gap-4 items-center justify-between">
+            <div className="pt-6 sm:pt-8 border-t border-white/10 mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 items-center justify-between">
               <div className="font-mono text-xs text-white/60">
                 <span>Direct Mentorship</span> • <span>Bengaluru</span>
               </div>
               <button
                 onClick={() => onOpenRegister('Mentorship with Chandni Galagali')}
-                className="px-5 py-2.5 bg-[#d8c29b] text-[#101d35] font-flow text-xl tracking-wider rounded-xl hover:bg-white transition-all cursor-pointer"
+                className="w-full sm:w-auto px-5 py-2.5 bg-[#d8c29b] text-[#101d35] font-flow text-xl tracking-wider rounded-xl hover:bg-white transition-all cursor-pointer text-center"
               >
                 BOOK CONSULTATION ↗
               </button>
@@ -121,7 +121,7 @@ export const WhoWeAre: React.FC<WhoWeAreProps> = ({ onOpenRegister }) => {
           </div>
 
           {/* Interactive Focus Areas List with Hover Revealer */}
-          <div className="lg:col-span-7 flex flex-col justify-between bg-white border border-[#141414]/10 rounded-3xl p-8 sm:p-10 shadow-sm">
+          <div className="lg:col-span-7 flex flex-col justify-between bg-white border border-[#141414]/10 rounded-3xl p-6 sm:p-10 shadow-sm">
             <div>
               <span className="font-mono text-xs uppercase tracking-widest text-[#141414]/60 block mb-6">
                 EXPLORE CORE COMPETENCIES (HOVER TO PREVIEW)

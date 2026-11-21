@@ -73,14 +73,14 @@ export const WhatWeDoAccordion: React.FC<WhatWeDoAccordionProps> = ({ onOpenRegi
 
   return (
     <section id="what-we-do" className="py-24 bg-[#141414] text-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 mb-12 sm:mb-16">
         <span className="font-mono text-xs uppercase tracking-[0.4em] text-[#d8c29b] block mb-3">
           W H A T  W E  D O
         </span>
-        <h2 className="font-flow text-6xl sm:text-7xl md:text-8xl leading-none text-white">
+        <h2 className="font-flow text-4xl sm:text-7xl md:text-8xl leading-none text-white">
           THE METHODOLOGY OF TRANSFORMATION
         </h2>
-        <p className="font-sans text-sm sm:text-base text-white/70 mt-3 max-w-xl">
+        <p className="font-sans text-xs sm:text-base text-white/70 mt-3 max-w-xl">
           Click any domain below to examine our experiential curriculum and training structure.
         </p>
       </div>
@@ -94,7 +94,7 @@ export const WhatWeDoAccordion: React.FC<WhatWeDoAccordionProps> = ({ onOpenRegi
               {/* Accordion Header with Infinite Scrolling Marquee */}
               <button
                 onClick={() => toggle(item.id)}
-                className="w-full text-left py-6 sm:py-8 flex flex-col justify-center cursor-pointer relative overflow-hidden focus:outline-none"
+                className="w-full text-left py-4 sm:py-8 flex flex-col justify-center cursor-pointer relative overflow-hidden focus:outline-none"
                 aria-expanded={isOpen}
               >
                 {/* Marquee Ticker Row */}
@@ -109,7 +109,7 @@ export const WhatWeDoAccordion: React.FC<WhatWeDoAccordionProps> = ({ onOpenRegi
                     {[1, 2, 3].map((rep) => (
                       <span
                         key={rep}
-                        className={`font-flow text-5xl sm:text-7xl md:text-8xl tracking-tight transition-colors pr-6 ${
+                        className={`font-flow text-3xl sm:text-6xl md:text-8xl tracking-tight transition-colors pr-6 ${
                           isOpen
                             ? 'text-[#d8c29b]'
                             : 'text-white/80 group-hover:text-white'
@@ -122,12 +122,12 @@ export const WhatWeDoAccordion: React.FC<WhatWeDoAccordionProps> = ({ onOpenRegi
                 </div>
 
                 {/* Subtitle Bar with Expand Indicator */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full flex items-center justify-between text-xs font-mono uppercase tracking-widest text-white/50 pt-2">
+                <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full flex items-center justify-between text-[11px] sm:text-xs font-mono uppercase tracking-widest text-white/50 pt-2">
                   <span>{item.title}</span>
                   <div className="flex items-center gap-2 text-white">
                     <span>{isOpen ? 'COLLAPSE' : 'DISCOVER MORE'}</span>
                     <span
-                      className={`text-lg transition-transform duration-300 ${
+                      className={`text-base sm:text-lg transition-transform duration-300 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                     >
@@ -139,8 +139,8 @@ export const WhatWeDoAccordion: React.FC<WhatWeDoAccordionProps> = ({ onOpenRegi
 
               {/* Accordion Body */}
               {isOpen && (
-                <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 animate-fade-in">
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-white/5 rounded-3xl p-8 sm:p-10 border border-white/10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-8 py-6 sm:py-8 animate-fade-in">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start bg-white/5 rounded-3xl p-5 sm:p-10 border border-white/10">
                     <div className="lg:col-span-7">
                       <span className="font-mono text-xs uppercase tracking-widest text-[#d8c29b] block mb-2">
                         CURRICULUM OVERVIEW

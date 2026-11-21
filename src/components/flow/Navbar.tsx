@@ -66,10 +66,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegister }) => {
           </nav>
 
           {/* Right Action Button & Mobile Hamburger */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
             <button
               onClick={() => onOpenRegister()}
-              className="px-5 py-2.5 bg-[#101d35] text-[#d8c29b] font-flow text-xl tracking-wider rounded-full hover:bg-[#172b49] hover:shadow-md transition-all cursor-pointer flex items-center gap-1.5"
+              className="hidden sm:flex px-5 py-2.5 bg-[#101d35] text-[#d8c29b] font-flow text-xl tracking-wider rounded-full hover:bg-[#172b49] hover:shadow-md transition-all cursor-pointer items-center gap-1.5"
             >
               <span>REGISTER</span>
               <span className="text-sm font-sans">↗</span>
@@ -78,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegister }) => {
             {/* Hamburger for mobile/tablet */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden w-10 h-10 rounded-full border border-black/20 flex flex-col items-center justify-center gap-1.5 cursor-pointer"
+              className="lg:hidden w-11 h-11 rounded-full border border-black/20 flex flex-col items-center justify-center gap-1.5 cursor-pointer bg-white/50 backdrop-blur-sm"
               aria-label="Toggle navigation menu"
             >
               <span

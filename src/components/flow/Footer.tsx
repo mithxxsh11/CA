@@ -17,24 +17,24 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
         {/* Massive Call to Action Header matching Flow Party */}
-        <div className="mb-20 text-center flex flex-col items-center">
+        <div className="mb-14 sm:mb-20 text-center flex flex-col items-center px-2">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-[#d8c29b] block mb-4">
             START YOUR TRANSFORMATION
           </span>
 
-          <h2 className="font-flow text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] text-white leading-[0.88] tracking-tight max-w-5xl mx-auto mb-10">
+          <h2 className="font-flow text-4xl sm:text-7xl md:text-8xl lg:text-[10rem] text-white leading-[0.92] sm:leading-[0.88] tracking-tight max-w-5xl mx-auto mb-8 sm:mb-10">
             LET'S MAKE YOUR NEXT MOVE COUNT.
           </h2>
 
           {/* Main Register Button with Offset Rotating Badge */}
-          <div className="relative inline-flex items-center justify-center my-4">
+          <div className="relative inline-flex items-center justify-center my-4 w-full sm:w-auto">
             {/* The Main Action Button - high z-index and clear padding */}
             <button
               onClick={onOpenRegister}
-              className="relative z-20 px-10 py-5 sm:px-14 sm:py-6 bg-[#d8c29b] text-[#101d35] font-flow text-3xl sm:text-4xl tracking-wider rounded-full hover:bg-white hover:scale-105 transition-all shadow-2xl cursor-pointer flex items-center gap-4 whitespace-nowrap"
+              className="relative z-20 w-full max-w-md sm:w-auto px-6 py-4 sm:px-14 sm:py-6 bg-[#d8c29b] text-[#101d35] font-flow text-2xl sm:text-4xl tracking-wider rounded-full hover:bg-white hover:scale-105 transition-all shadow-2xl cursor-pointer flex items-center justify-center gap-3 sm:gap-4 whitespace-nowrap text-center"
             >
               <span>REGISTER YOUR INTEREST</span>
-              <span className="text-2xl font-sans font-bold">↗</span>
+              <span className="text-xl sm:text-2xl font-sans font-bold">↗</span>
             </button>
 
             {/* Rotating Badge - shifted further to the right to keep button text 100% visible */}

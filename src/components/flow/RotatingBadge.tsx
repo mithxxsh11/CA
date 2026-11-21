@@ -3,7 +3,7 @@ import React from 'react'
 interface RotatingBadgeProps {
   text?: string
   centerText?: string
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'responsive'
   theme?: 'dark' | 'light' | 'gold'
   className?: string
   reverse?: boolean
@@ -21,6 +21,7 @@ export const RotatingBadge: React.FC<RotatingBadgeProps> = ({
     sm: 'w-24 h-24 text-[9px]',
     md: 'w-36 h-36 md:w-44 md:h-44 text-[11px]',
     lg: 'w-48 h-48 md:w-60 md:h-60 text-[13px]',
+    responsive: 'w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 text-[9px] sm:text-[11px]',
   }
 
   const themeMap = {

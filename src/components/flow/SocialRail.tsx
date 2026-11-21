@@ -44,11 +44,11 @@ export const SocialRail: React.FC = () => {
 
   return (
     <aside
-      className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-3"
       aria-label="Direct Quick Contact Channels"
     >
       {/* Floating Buttons Group */}
-      <div className="flex flex-col gap-2.5 bg-[#efece6]/95 backdrop-blur-md p-2 rounded-2xl border border-black/15 shadow-2xl">
+      <div className="flex flex-col gap-2 sm:gap-2.5 bg-[#efece6]/95 backdrop-blur-md p-1.5 sm:p-2 rounded-2xl border border-black/15 shadow-2xl">
         {channels.map((channel) => {
           const isItemHovered = hovered === channel.id
           return (
@@ -70,7 +70,7 @@ export const SocialRail: React.FC = () => {
                 rel={channel.id !== 'email' ? 'noreferrer' : undefined}
                 onMouseEnter={() => setHovered(channel.id)}
                 onMouseLeave={() => setHovered(null)}
-                className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-md transition-all duration-200 hover:scale-110 cursor-pointer ${channel.bg}`}
+                className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shadow-md transition-all duration-200 hover:scale-110 cursor-pointer ${channel.bg}`}
                 aria-label={`Open ${channel.name} (${channel.subtitle})`}
                 title={`${channel.name} - ${channel.subtitle}`}
               >

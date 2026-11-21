@@ -40,15 +40,15 @@ export const BeyondWords: React.FC = () => {
     <section id="beyond-words" className="py-24 bg-[#efece6] border-t border-[#141414]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Header matching Flow Party's "p a r t y  t o o l s" */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div>
             <span className="font-mono text-xs uppercase tracking-[0.4em] text-[#141414]/60 block mb-2">
               B E Y O N D  W O R D S
             </span>
-            <h2 className="font-flow text-6xl sm:text-7xl md:text-8xl leading-none text-[#141414]">
+            <h2 className="font-flow text-4xl sm:text-7xl md:text-8xl leading-none text-[#141414]">
               THE COMMUNITY INITIATIVE
             </h2>
-            <p className="font-sans text-sm sm:text-base text-[#141414]/70 mt-3 max-w-xl">
+            <p className="font-sans text-xs sm:text-base text-[#141414]/70 mt-3 max-w-xl">
               An expressive community founded by Chandni Galagali to celebrate ideas, open dialogue, and real human connection.
             </p>
           </div>
@@ -57,7 +57,7 @@ export const BeyondWords: React.FC = () => {
             href="https://www.instagram.com/beyondwordscommunity/"
             target="_blank"
             rel="noreferrer"
-            className="px-6 py-3 rounded-full border-2 border-[#141414] font-mono text-xs uppercase tracking-widest text-[#141414] hover:bg-[#141414] hover:text-white transition-all self-start md:self-end flex items-center gap-2"
+            className="w-full sm:w-auto px-6 py-3 rounded-full border-2 border-[#141414] font-mono text-xs uppercase tracking-widest text-[#141414] hover:bg-[#141414] hover:text-white transition-all text-center justify-center flex items-center gap-2"
           >
             <span>VISIT @BEYONDWORDSCOMMUNITY</span>
             <span>↗</span>
@@ -72,10 +72,10 @@ export const BeyondWords: React.FC = () => {
               href={pill.href}
               target={pill.external ? '_blank' : undefined}
               rel={pill.external ? 'noreferrer' : undefined}
-              className={`p-8 sm:p-10 bg-white border border-[#141414]/10 rounded-3xl flex flex-col justify-between shadow-sm transition-all duration-300 hover:-translate-y-1.5 ${pill.bg} group`}
+              className={`p-6 sm:p-10 bg-white border border-[#141414]/10 rounded-3xl flex flex-col justify-between shadow-sm transition-all duration-300 hover:-translate-y-1.5 ${pill.bg} group`}
             >
               <div>
-                <div className="flex justify-between items-center mb-6">
+                <div className="flex justify-between items-center mb-4 sm:mb-6">
                   <span className="font-mono text-[10px] uppercase tracking-widest px-3 py-1 rounded-full bg-[#141414]/5 text-[#141414]/70 group-hover:bg-black/10">
                     {pill.tag}
                   </span>
@@ -84,15 +84,15 @@ export const BeyondWords: React.FC = () => {
                   </span>
                 </div>
 
-                <h3 className="font-flow text-4xl sm:text-5xl text-[#141414] leading-tight mb-4">
+                <h3 className="font-flow text-3xl sm:text-5xl text-[#141414] leading-tight mb-3 sm:mb-4">
                   {pill.title}
                 </h3>
-                <p className="font-sans text-sm text-[#141414]/70 group-hover:text-current leading-relaxed">
+                <p className="font-sans text-xs sm:text-sm text-[#141414]/70 group-hover:text-current leading-relaxed">
                   {pill.desc}
                 </p>
               </div>
 
-              <div className="pt-6 border-t border-[#141414]/10 mt-6 flex items-center justify-between font-mono text-xs tracking-wider">
+              <div className="pt-4 sm:pt-6 border-t border-[#141414]/10 mt-4 sm:mt-6 flex items-center justify-between font-mono text-xs tracking-wider">
                 <span>CONNECT DIRECTLY</span>
                 <span>LEARN MORE ↗</span>
               </div>

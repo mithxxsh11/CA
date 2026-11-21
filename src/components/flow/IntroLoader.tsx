@@ -109,10 +109,10 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onComplete }) => {
         </div>
 
         {/* Big Animated Word */}
-        <div className="overflow-hidden py-2">
+        <div className="overflow-hidden py-2 max-w-full">
           <h1
             key={slide}
-            className={`font-flow text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] leading-none tracking-tight animate-[fadeInUp_0.4s_ease-out] ${current.textColor}`}
+            className={`font-flow text-4xl sm:text-7xl md:text-9xl lg:text-[11rem] leading-none tracking-tight text-center px-2 animate-[fadeInUp_0.4s_ease-out] break-words ${current.textColor}`}
           >
             {current.word}
           </h1>

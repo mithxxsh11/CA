@@ -34,7 +34,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
       {/* Hero Core Content: Oversized Headline + Central Flowvatar */}
       <div className="relative z-10 max-w-7xl mx-auto w-full my-auto flex flex-col items-center text-center">
         {/* Massive Flow-Party Style Headline */}
-        <h1 className="font-flow text-5xl sm:text-7xl md:text-8xl lg:text-[7.25rem] text-[#141414] leading-[0.88] tracking-tight max-w-6xl mx-auto">
+        <h1 className="font-flow text-4xl sm:text-7xl md:text-8xl lg:text-[7.25rem] text-[#141414] leading-[0.92] sm:leading-[0.88] tracking-tight max-w-6xl mx-auto px-2">
           CHANDNI’S ACADEMY IS A SPACE TO{' '}
           <span className="text-[#2458f5] underline decoration-4 decoration-[#bfff0a] underline-offset-8">
             COMMUNICATE
@@ -48,7 +48,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
         </h1>
 
         {/* Central Interactive Flowvatar with Overlapping Rotating Badge */}
-        <div className="relative mt-12 sm:mt-16 flex items-center justify-center">
+        <div className="relative mt-8 sm:mt-16 flex items-center justify-center">
           {/* Central Flowvatar Face */}
           <Flowvatar
             size="lg"
@@ -57,11 +57,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
           />
 
           {/* Overlapping Continuous Rotating Circular Badge */}
-          <div className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-10 z-20">
+          <div className="absolute -bottom-4 -right-2 sm:-bottom-8 sm:-right-10 z-20">
             <RotatingBadge
               text="WHERE EXCELLENCE MEETS EXPRESSION • CHANDNI'S ACADEMY • "
               centerText="EXPRESS"
-              size="md"
+              size="responsive"
               theme="dark"
             />
           </div>
@@ -75,25 +75,25 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
         </div>
 
         {/* Brand Core Pillars Ticker */}
-        <div className="mt-12 flex flex-wrap justify-center items-center gap-4 sm:gap-8 font-mono text-xs sm:text-sm tracking-[0.25em] uppercase text-[#141414]/80">
-          <span className="flex items-center gap-2">
+        <div className="mt-8 sm:mt-12 flex flex-wrap justify-center items-center gap-3 sm:gap-8 font-mono text-[11px] sm:text-sm tracking-[0.2em] uppercase text-[#141414]/80 px-2">
+          <span className="flex items-center gap-1.5">
             <span className="text-[#2458f5]">●</span> COMMUNICATE: Speak with Clarity
           </span>
           <span className="hidden md:inline text-black/30">|</span>
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-1.5">
             <span className="text-[#0f8b54]">●</span> CONFIDENCE: Express Without Limits
           </span>
           <span className="hidden md:inline text-black/30">|</span>
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-1.5">
             <span className="text-[#ea384c]">●</span> LEAD: Make an Impact
           </span>
         </div>
 
         {/* Action CTAs */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+        <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto px-4 sm:px-0">
           <button
             onClick={() => onOpenRegister()}
-            className="px-8 py-4 bg-[#101d35] text-[#d8c29b] font-flow text-2xl tracking-wider rounded-2xl hover:bg-[#172b49] hover:scale-105 transition-all shadow-xl cursor-pointer flex items-center gap-3"
+            className="w-full sm:w-auto px-8 py-4 bg-[#101d35] text-[#d8c29b] font-flow text-2xl tracking-wider rounded-2xl hover:bg-[#172b49] hover:scale-105 transition-all shadow-xl cursor-pointer flex items-center justify-center gap-3"
           >
             <span>REGISTER YOUR INTEREST</span>
             <span>↗</span>
@@ -101,7 +101,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
 
           <a
             href="#programmes"
-            className="px-8 py-4 bg-white/70 border-2 border-[#141414]/20 rounded-2xl font-flow text-2xl tracking-wider text-[#141414] hover:bg-white hover:border-[#141414] transition-all flex items-center gap-2"
+            className="w-full sm:w-auto px-8 py-4 bg-white/70 border-2 border-[#141414]/20 rounded-2xl font-flow text-2xl tracking-wider text-[#141414] hover:bg-white hover:border-[#141414] transition-all flex items-center justify-center gap-2"
           >
             <span>EXPLORE PROGRAMMES</span>
             <span className="text-base">↓</span>

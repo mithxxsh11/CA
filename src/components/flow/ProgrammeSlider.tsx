@@ -255,30 +255,30 @@ export const ProgrammeSlider: React.FC<ProgrammeSliderProps> = ({ onOpenRegister
               whileHover={{ y: -6 }}
               whileTap={{ scale: 0.985 }}
               transition={{ duration: 0.2 }}
-              className={`w-[310px] sm:w-[400px] lg:w-[440px] shrink-0 rounded-3xl p-8 flex flex-col justify-between text-white shadow-xl relative overflow-hidden group select-none ${p.bg}`}
+              className={`w-[84vw] max-w-[340px] sm:w-[400px] lg:w-[440px] shrink-0 rounded-3xl p-6 sm:p-8 flex flex-col justify-between text-white shadow-xl relative overflow-hidden group select-none ${p.bg}`}
             >
               {/* Top Tag & Counter */}
-              <div className="flex justify-between items-start mb-6">
-                <span className="font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-white/10 border border-white/20">
+              <div className="flex justify-between items-start mb-4 sm:mb-6">
+                <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-white/10 border border-white/20">
                   {p.tag}
                 </span>
-                <span className="font-mono text-sm tracking-widest text-white/50">
+                <span className="font-mono text-xs sm:text-sm tracking-widest text-white/50">
                   0{idx + 1} / 04
                 </span>
               </div>
 
               {/* Title & Description */}
               <div className="my-auto">
-                <h3 className={`font-flow text-4xl sm:text-5xl leading-[0.92] mb-4 ${p.accent}`}>
+                <h3 className={`font-flow text-3xl sm:text-4xl lg:text-5xl leading-[0.95] mb-3 sm:mb-4 ${p.accent}`}>
                   {p.title}
                 </h3>
-                <p className="font-sans text-sm text-white/80 leading-relaxed mb-6">
+                <p className="font-sans text-xs sm:text-sm text-white/80 leading-relaxed mb-4 sm:mb-6">
                   {p.description}
                 </p>
 
                 {/* Key Focus Points */}
-                <div className="space-y-2 mb-6">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-white/50 block">
+                <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
+                  <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-white/50 block">
                     KEY FOCUS AREAS:
                   </span>
                   {p.outcomes.map((o) => (
@@ -291,12 +291,12 @@ export const ProgrammeSlider: React.FC<ProgrammeSliderProps> = ({ onOpenRegister
               </div>
 
               {/* Format & Register Button */}
-              <div className="pt-6 border-t border-white/15 flex items-center justify-between gap-4">
+              <div className="pt-4 sm:pt-6 border-t border-white/15 flex items-center justify-between gap-4">
                 <div className="flex flex-col">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-white/50">
+                  <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-white/50">
                     FORMAT
                   </span>
-                  <span className="font-mono text-xs text-white/90">{p.format}</span>
+                  <span className="font-mono text-[11px] sm:text-xs text-white/90">{p.format}</span>
                 </div>
 
                 <button
@@ -305,7 +305,7 @@ export const ProgrammeSlider: React.FC<ProgrammeSliderProps> = ({ onOpenRegister
                     if (hasDragged.current) return
                     onOpenRegister(p.title)
                   }}
-                  className="px-5 py-2.5 bg-white text-[#101d35] font-flow text-xl tracking-wider rounded-xl hover:bg-[#d8c29b] transition-all cursor-pointer flex items-center gap-1.5 shadow-md active:scale-95"
+                  className="px-4 py-2 sm:px-5 sm:py-2.5 bg-white text-[#101d35] font-flow text-lg sm:text-xl tracking-wider rounded-xl hover:bg-[#d8c29b] transition-all cursor-pointer flex items-center gap-1.5 shadow-md active:scale-95"
                 >
                   <span>REGISTER</span>
                   <span className="text-sm font-sans font-bold">↗</span>

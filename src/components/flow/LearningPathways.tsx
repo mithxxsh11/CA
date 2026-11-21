@@ -37,20 +37,20 @@ export const LearningPathways: React.FC<LearningPathwaysProps> = ({ onOpenRegist
     <section id="learning" className="py-24 bg-[#efece6] border-t border-[#141414]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 px-2">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-[#141414]/60 block mb-3">
             LEARNING PATHWAYS
           </span>
-          <h2 className="font-flow text-6xl sm:text-7xl md:text-8xl leading-none text-[#141414]">
+          <h2 className="font-flow text-4xl sm:text-7xl md:text-8xl leading-none text-[#141414]">
             GROW AT YOUR OWN PACE
           </h2>
-          <p className="font-sans text-base text-[#141414]/70 mt-4 max-w-2xl mx-auto">
+          <p className="font-sans text-sm sm:text-base text-[#141414]/70 mt-3 sm:mt-4 max-w-2xl mx-auto">
             Whether preparing for a career leap or equipping an entire team, choose the pathway tailored to your goals.
           </p>
         </div>
 
         {/* 4 Audience Stream Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 sm:mb-16">
           {audiences.map((aud, idx) => (
             <div
               key={aud.title}
@@ -83,21 +83,21 @@ export const LearningPathways: React.FC<LearningPathwaysProps> = ({ onOpenRegist
         {/* Dual Enquiry Cards matching Flow Party's Bottom Action Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Card A: Individual Learning */}
-          <div className="bg-[#101d35] text-white rounded-3xl p-8 sm:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+          <div className="bg-[#101d35] text-white rounded-3xl p-6 sm:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
                 <Flowvatar size="sm" theme="navy" />
                 <div>
-                  <span className="font-mono text-xs uppercase tracking-widest text-[#d8c29b] block">
+                  <span className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-[#d8c29b] block mb-1">
                     PERSON-TO-PERSON
                   </span>
-                  <h3 className="font-flow text-4xl sm:text-5xl text-white leading-none">
+                  <h3 className="font-flow text-3xl sm:text-4xl lg:text-5xl text-white leading-none">
                     INDIVIDUAL LEARNING
                   </h3>
                 </div>
               </div>
 
-              <p className="font-sans text-sm sm:text-base text-white/80 leading-relaxed mb-8">
+              <p className="font-sans text-xs sm:text-base text-white/80 leading-relaxed mb-8">
                 Personalized communication coaching, spoken English fluency, confidence building, and one-on-one presentation preparation in HSR Layout, Bengaluru or Online.
               </p>
             </div>
@@ -114,21 +114,21 @@ export const LearningPathways: React.FC<LearningPathwaysProps> = ({ onOpenRegist
           </div>
 
           {/* Card B: Corporate & Team Training */}
-          <div className="bg-[#0f8b54] text-white rounded-3xl p-8 sm:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+          <div className="bg-[#0f8b54] text-white rounded-3xl p-6 sm:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
             <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
                 <Flowvatar size="sm" theme="green" />
                 <div>
-                  <span className="font-mono text-xs uppercase tracking-widest text-[#bfff0a] block">
+                  <span className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-[#bfff0a] block mb-1">
                     ORGANISATIONS & FIRMS
                   </span>
-                  <h3 className="font-flow text-4xl sm:text-5xl text-white leading-none">
+                  <h3 className="font-flow text-3xl sm:text-4xl lg:text-5xl text-white leading-none">
                     CORPORATE TRAINING
                   </h3>
                 </div>
               </div>
 
-              <p className="font-sans text-sm sm:text-base text-white/90 leading-relaxed mb-8">
+              <p className="font-sans text-xs sm:text-base text-white/90 leading-relaxed mb-8">
                 Customized corporate workshops, team communication labs, managerial presentation drills, and cross-cultural communication training for enterprises and fast-growing startups.
               </p>
             </div>
