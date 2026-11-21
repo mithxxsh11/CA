@@ -49,11 +49,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
 
         {/* Central Interactive Flowvatar with Overlapping Rotating Badge */}
         <div className="relative mt-8 sm:mt-16 flex items-center justify-center">
-          {/* Central Flowvatar Face */}
+          {/* Central Flowvatar Face (Interactive mascot; taps trigger fun expressions and quotes, registration is handled by buttons) */}
           <Flowvatar
             size="lg"
             theme="navy"
-            onClick={() => onOpenRegister()}
           />
 
           {/* Overlapping Continuous Rotating Circular Badge */}
