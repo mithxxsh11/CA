@@ -54,8 +54,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegister }) => {
           {/* Col 1: Brand Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-[#d8c29b] text-[#101d35] flex items-center justify-center font-flow text-xl font-bold">
-                CA
+              <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center shrink-0 border border-white/20 shadow-lg bg-white/5 p-1">
+                <img
+                  src="/logos/chandnis-academy-badge.png"
+                  alt="Chandni's Academy Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-flow text-3xl tracking-wide text-white">
                 CHANDNI'S ACADEMY

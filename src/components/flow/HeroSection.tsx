@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flowvatar } from './Flowvatar'
+import { StudioMic3D } from './StudioMic3D'
 import { RotatingBadge } from './RotatingBadge'
 
 interface HeroSectionProps {
@@ -31,7 +31,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
         <span className="hidden sm:inline">HSR LAYOUT • BENGALURU • ONLINE</span>
       </div>
 
-      {/* Hero Core Content: Oversized Headline + Central Flowvatar */}
+      {/* Hero Core Content: Oversized Headline + Central 3D Studio Microphone */}
       <div className="relative z-10 max-w-7xl mx-auto w-full my-auto flex flex-col items-center text-center">
         {/* Massive Flow-Party Style Headline */}
         <h1 className="font-flow text-4xl sm:text-7xl md:text-8xl lg:text-[7.25rem] text-[#141414] leading-[0.92] sm:leading-[0.88] tracking-tight max-w-6xl mx-auto px-2">
@@ -47,13 +47,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
           <span className="text-[#ea384c]">PURPOSE</span>.
         </h1>
 
-        {/* Central Interactive Flowvatar with Overlapping Rotating Badge */}
+        {/* Central Interactive 3D Studio Microphone with Overlapping Rotating Badge */}
         <div className="relative mt-8 sm:mt-16 flex items-center justify-center">
-          {/* Central Flowvatar Face (Interactive mascot; taps trigger fun expressions and quotes, registration is handled by buttons) */}
-          <Flowvatar
-            size="lg"
-            theme="navy"
-          />
+          {/* Central Interactive 3D Studio Condenser Mic tracking user's cursor in 3D */}
+          <StudioMic3D />
 
           {/* Overlapping Continuous Rotating Circular Badge */}
           <div className="absolute -bottom-4 -right-2 sm:-bottom-8 sm:-right-10 z-20">

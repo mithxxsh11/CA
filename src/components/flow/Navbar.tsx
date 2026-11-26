@@ -35,8 +35,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegister }) => {
             className="flex items-center gap-3 group focus:outline-none"
             aria-label="Chandni's Academy Home"
           >
-            <div className="w-10 h-10 rounded-full bg-[#101d35] text-[#d8c29b] flex items-center justify-center font-flow text-xl tracking-wider group-hover:scale-105 transition-transform">
-              CA
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-md border border-black/10">
+              <img
+                src="/logos/chandnis-academy-badge.png"
+                alt="Chandni's Academy Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-flow text-2xl tracking-wide text-[#141414] leading-none">

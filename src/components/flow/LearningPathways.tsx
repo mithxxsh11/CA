@@ -1,5 +1,4 @@
 import React from 'react'
-import { Flowvatar } from './Flowvatar'
 
 interface LearningPathwaysProps {
   onOpenRegister: (pathway?: string) => void
@@ -86,7 +85,13 @@ export const LearningPathways: React.FC<LearningPathwaysProps> = ({ onOpenRegist
           <div className="bg-[#101d35] text-white rounded-3xl p-6 sm:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
             <div className="relative z-10">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
-                <Flowvatar size="sm" theme="navy" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/10 border border-white/20 p-2 flex items-center justify-center shrink-0 shadow-lg">
+                  <img
+                    src="/logos/chandnis-academy-badge.png"
+                    alt="Individual Coaching"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <div>
                   <span className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-[#d8c29b] block mb-1">
                     PERSON-TO-PERSON
@@ -117,7 +122,9 @@ export const LearningPathways: React.FC<LearningPathwaysProps> = ({ onOpenRegist
           <div className="bg-[#0f8b54] text-white rounded-3xl p-6 sm:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
             <div className="relative z-10">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
-                <Flowvatar size="sm" theme="green" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-black/20 border border-[#bfff0a]/40 p-2 flex items-center justify-center shrink-0 shadow-lg text-[#bfff0a]">
+                  <span className="font-flow text-2xl font-bold tracking-wider">CORP</span>
+                </div>
                 <div>
                   <span className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-[#bfff0a] block mb-1">
                     ORGANISATIONS & FIRMS

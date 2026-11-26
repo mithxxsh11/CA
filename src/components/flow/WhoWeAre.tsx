@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Flowvatar } from './Flowvatar'
 
 interface WhoWeAreProps {
   onOpenRegister: (topic?: string) => void
@@ -82,9 +81,18 @@ export const WhoWeAre: React.FC<WhoWeAreProps> = ({ onOpenRegister }) => {
                 <span className="w-3 h-3 rounded-full bg-[#bfff0a] animate-pulse" />
               </div>
 
-              {/* Founder Avatar & Title */}
+              {/* Founder Emblem & Title */}
               <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5 sm:gap-6 mb-8">
-                <Flowvatar size="md" theme="navy" />
+                <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-[#101d35] border-2 border-[#d8c29b]/60 shadow-2xl flex items-center justify-center shrink-0 group">
+                  <img
+                    src="/logos/chandnis-academy-badge.png"
+                    alt="Chandni's Academy Official Emblem"
+                    className="w-full h-full object-contain rounded-full group-hover:scale-105 transition-transform"
+                  />
+                  <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-[#d8c29b] text-[#101d35] flex items-center justify-center font-bold text-xs shadow-md">
+                    ★
+                  </div>
+                </div>
                 <div>
                   <h3 className="font-flow text-3xl sm:text-5xl leading-none text-white">
                     CHANDNI GALAGALI

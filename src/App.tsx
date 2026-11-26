@@ -1,75 +1,84 @@
 import { useState } from 'react'
+import { MotionConfig } from 'framer-motion'
 import { IntroLoader } from './components/flow/IntroLoader'
-import { Navbar } from './components/flow/Navbar'
-import { SocialRail } from './components/flow/SocialRail'
-import { HeroSection } from './components/flow/HeroSection'
-import { ProgrammeSlider } from './components/flow/ProgrammeSlider'
-import { AboutIntro } from './components/flow/AboutIntro'
-import { WhoWeAre } from './components/flow/WhoWeAre'
-import { LearningPathways } from './components/flow/LearningPathways'
-import { WhatWeDoAccordion } from './components/flow/WhatWeDoAccordion'
-import { BeyondWords } from './components/flow/BeyondWords'
-import { Footer } from './components/flow/Footer'
-import { InterestModal } from './components/flow/InterestModal'
+import { Navbar } from './components/redesign/Navbar'
+import { HeroSection } from './components/redesign/HeroSection'
+import { AboutSection } from './components/redesign/AboutSection'
+import { CoursesSection } from './components/redesign/CoursesSection'
+import { WhyChooseUsSection } from './components/redesign/WhyChooseUsSection'
+import { TestimonialsSection } from './components/redesign/TestimonialsSection'
+import { GallerySection } from './components/redesign/GallerySection'
+import { ContactSection } from './components/redesign/ContactSection'
+import { Footer } from './components/redesign/Footer'
+import { EnquiryModal } from './components/redesign/EnquiryModal'
+import { FloatingWhatsApp } from './components/redesign/FloatingWhatsApp'
+import { ScrollProgressBar } from './components/redesign/MotionPrimitives'
 
 export default function App() {
   const [showIntro, setShowIntro] = useState(true)
   const [modalOpen, setModalOpen] = useState(false)
-  const [selectedProgramme, setSelectedProgramme] = useState('')
+  const [selectedCourse, setSelectedCourse] = useState('Spoken English & Communication Mastery')
 
-  const handleOpenRegister = (programme?: string) => {
-    setSelectedProgramme(programme || 'Spoken English & Communication Mastery')
+  const handleOpenEnquire = (courseTitle?: string) => {
+    if (courseTitle) {
+      setSelectedCourse(courseTitle)
+    }
     setModalOpen(true)
   }
 
-  const handleCloseRegister = () => {
+  const handleCloseEnquire = () => {
     setModalOpen(false)
   }
 
   return (
-    <div className="relative min-h-screen bg-[#efece6] text-[#141414] overflow-x-hidden selection:bg-[#d8c29b] selection:text-[#101d35]">
-      {/* Signature Multi-stage Intro Loader */}
-      {showIntro && <IntroLoader onComplete={() => setShowIntro(false)} />}
+    <MotionConfig reducedMotion="user">
+      <div className="relative min-h-screen bg-[#FFFCFA] text-[#171717] overflow-x-hidden">
+        {/* Serene Scroll Progress Indicator */}
+        <ScrollProgressBar />
 
-      {/* Fixed Vertical Social Rail for Desktop */}
-      <SocialRail />
+        {/* Signature Multi-stage Intro Sequence */}
+        {showIntro && <IntroLoader onComplete={() => setShowIntro(false)} />}
 
-      {/* Top Glassmorphic Navigation */}
-      <Navbar onOpenRegister={handleOpenRegister} />
+        {/* Horizontal Sticky Navigation */}
+        <Navbar onOpenEnquire={handleOpenEnquire} />
 
-      {/* Main Single-Page Content */}
-      <main id="main">
-        {/* Hero Section with Interactive Flowvatar & Rotating Badge */}
-        <HeroSection onOpenRegister={handleOpenRegister} />
+        {/* Main Educational Single-Page Sections */}
+        <main id="main" className="relative z-10">
+          {/* 1. Hero Section */}
+          <HeroSection onOpenEnquire={handleOpenEnquire} />
 
-        {/* Horizontal Draggable Programme Slider */}
-        <ProgrammeSlider onOpenRegister={handleOpenRegister} />
+          {/* 2. About CHANDNI'S Academy */}
+          <AboutSection onOpenEnquire={handleOpenEnquire} />
 
-        {/* What is Chandni's Academy / About Intro */}
-        <AboutIntro onOpenRegister={() => handleOpenRegister('General Academy Enquiry')} />
+          {/* 3. Courses Showcase */}
+          <CoursesSection onOpenEnquire={handleOpenEnquire} />
 
-        {/* Who We Are & Founder Showcase */}
-        <WhoWeAre onOpenRegister={handleOpenRegister} />
+          {/* 4. Why Choose Us Section */}
+          <WhyChooseUsSection />
 
-        {/* Learning Pathways: Individual & Corporate */}
-        <LearningPathways onOpenRegister={handleOpenRegister} />
+          {/* 5. Student Testimonials Carousel */}
+          <TestimonialsSection />
 
-        {/* What We Do Accordion with Infinite Marquees */}
-        <WhatWeDoAccordion onOpenRegister={handleOpenRegister} />
+          {/* 6. Life at CHANDNI'S Academy Gallery */}
+          <GallerySection />
 
-        {/* Beyond Words Community Initiative */}
-        <BeyondWords />
-      </main>
+          {/* 7. Contact & Admissions Form */}
+          <ContactSection />
+        </main>
 
-      {/* Grand Footer */}
-      <Footer onOpenRegister={() => handleOpenRegister('Footer General Enquiry')} />
+        {/* Minimalist Footer */}
+        <Footer />
 
-      {/* Full-Screen Interest / Registration Modal */}
-      <InterestModal
-        isOpen={modalOpen}
-        onClose={handleCloseRegister}
-        initialProgramme={selectedProgramme}
-      />
-    </div>
+        {/* Quick Access Floating WhatsApp Button */}
+        <FloatingWhatsApp />
+
+        {/* Admissions Enquiry Modal */}
+        <EnquiryModal
+          isOpen={modalOpen}
+          onClose={handleCloseEnquire}
+          initialCourse={selectedCourse}
+        />
+      </div>
+    </MotionConfig>
   )
 }
